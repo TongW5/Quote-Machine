@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
-/*
+
+/* requirement from FCC
 User Story #1: I can see a wrapper element with a corresponding id="quote-box".
 
 User Story #2: Within #quote-box, I can see an element with a corresponding id="text".
@@ -18,7 +19,6 @@ export const QuoteBox = ()=>{
   const url = 'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json'
   const [quotes,setQuotes]=useState([]);
   const [quote,setQuote] = useState('');
-
 
 
 //connect to API load all quotes and set a randon quote when the webpage is conneted
