@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
+import {Typography,Button,Paper,Container,Box} from '@mui/material';
+import {box} from './styles'
 
 /* requirement from FCC
 User Story #1: I can see a wrapper element with a corresponding id="quote-box".
@@ -55,17 +57,24 @@ User Story #10: I can tweet the current quote by clicking on the #tweet-quote a 
 User Story #11: The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
 */
 return (
-  <div id="quote-box" style={{backgroundColor:'LightGrey',border:'1px solid white',margin:'auto',textAlign:'center',width:'500px',height:'400px'}}>
-  <p>Random Quote Machine </p>
-    
-    <p id="text">"{quote.quote}"</p>
-    <p id="author">{quote.author}</p>
-  
-    <button id="new-quote" onClick={onClick}>new quote</button>
-    <button>
-    <a id="tweet-quote" href="http://www.twitter.com/intent/tweet" target="_blank">tweet quote</a>
-    </button>
+  <Container>
+  <div style={{margin:'auto',textAlign:"center"}}>
+  <Typography variant="h3" style={{fontWeight:'500'}}>Random Quote Machine </Typography>
+  </div>
+
+  <div id="quote-box" style={box}>
+
+    <div id="text-area" style={{margin:"30px 0 70px 0"}}>
+    <Typography id="text" variant="h4" style={{fontWeight:"600",paddingBottom:"20px",color:"DimGray"}}>"{quote.quote}"</Typography>
+    <Typography id="author" variant="h4" style={{fontWeight:"700",color:"Gray",marignBotton:"20px"}}>{quote.author}</Typography>
+    </div>
+
+    <Button id="new-quote" variant="contained" onClick={onClick} style={{marginRight:'5px',backgroundColor:"Pink",color:'black'}}>new quote</Button>
+    <Button varaint='contained' style={{backgroundColor:'DodgerBlue',color:'white'}}>
+    <a id="tweet-quote" style={{textDecoration:"none",color:'white'}} href="http://www.twitter.com/intent/tweet" target="_blank">tweet quote</a>
+    </Button>
 
   </div>
+  </Container>
  )
 }
