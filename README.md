@@ -1,2 +1,2 @@
-# [Quote-Machine](tps://quotemachine001.netlify.app)
+# [Quote-Machine](https://quotemachine001.netlify.app)
   a webpage to show random quote
