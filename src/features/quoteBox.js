@@ -59,7 +59,7 @@ User Story #11: The #quote-box wrapper element should be horizontally centered. 
 return (
   <Container>
   <div style={{margin:'auto',textAlign:"center"}}>
-  <Typography variant="h3" style={{fontWeight:'500'}}>Random Quote Machine </Typography>
+  <Typography variant="h3" style={{fontWeight:'500',padding:'30px 0 40px 0'}}>Random Quote Machine </Typography>
   </div>
 
   <div id="quote-box" style={box}>
